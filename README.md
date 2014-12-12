@@ -9,8 +9,6 @@ He doesn't specify a license but I imagine it's something open.
 Julian increased the performance massively, I hope to tweak his
 work just a little bit further and port it to AVR natively.
 
-The video Julian posted is here:
-
-https://www.youtube.com/watch?v=lkWZuAnHa2Y
+[![The video Julian posted is here:](http://img.youtube.com/vi/lkWZuAnHa2Y/0.jpg)](http://www.youtube.com/watch?v=lkWZuAnHa2Y)
 
 
