@@ -1,9 +1,9 @@
 /*
  * spaghiletti.c
  *
- * Created: 12/12/2014 20:14:47
  *  Author: electronoob
- */ 
+ *  Author: Julian Ilett
+ */
 
 #include <avr/power.h>
 #include <avr/io.h>
@@ -35,7 +35,7 @@ int main(void)
 	_delay_ms(1);
 	digitalWrite(PIN_RESET, HIGH);
 	_delay_ms(1);
-	
+
 	oledWriteCmd(0x8d); //enable charge pump
 	oledWriteCmd(0x14);
 	_delay_ms(1);
@@ -59,14 +59,14 @@ int main(void)
 	//  oledWriteCmd(0xdb); //vcomh deselect level (brightness)
 	//  oledWriteCmd(0x20);
 
-	
+
 	oledWriteCmd(0x20); //set horizontal addressing mode for screen clear
 	oledWriteCmd(0x01);
-	
+
 	oledWriteCmd(0x21); //set column start and end address
 	oledWriteCmd(0x00); //set column start address
 	oledWriteCmd(0x7f); //set column end address
-	
+
 	oledWriteCmd(0x22); //set row start and end address
 	oledWriteCmd(0x00); //set row start address
 	oledWriteCmd(0x07); //set row end address
