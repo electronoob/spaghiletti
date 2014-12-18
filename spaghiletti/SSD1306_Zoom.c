@@ -22,8 +22,9 @@ void oledStart()
 	oledWriteCmd(0xff); //was ff
 	oledWriteCmd(0xa4); //disable entire display on
 	oledWriteCmd(0xa6); //set normal display
-	//  oledWriteCmd(0xd5); //set oscillator frequency
-	//  oledWriteCmd(0x80);
+	
+	oledWriteCmd(0xd5); //set oscillator frequency
+	oledWriteCmd(0x80);//80
 	//  oledWriteCmd(0xdb); //vcomh deselect level (brightness)
 	//  oledWriteCmd(0x20);
 	oledWriteCmd(0x20); //set horizontal addressing mode for screen clear
@@ -35,12 +36,8 @@ void oledStart()
 	oledWriteCmd(0x00); //set row start address
 	oledWriteCmd(0x07); //set row end address
 	oledWriteCmd(0xaf); //set display on
-	oledWipeScreen();
-	oledWriteCmd(0x20); //set page addressing mode
-	oledWriteCmd(0x02);
-	oledWriteCmd(0xb7); //set page start address to page 7
-	oledWriteCmd(0x00); //set lower column start address
-	oledWriteCmd(0x10); //set upper column start address
+
+
 	//  oledWriteCmd(0x27); //set right horizontal scroll
 	//  oledWriteCmd(0x0);  //dummy byte
 	//  oledWriteCmd(0x0);  //page start address
@@ -49,7 +46,12 @@ void oledStart()
 	//  oledWriteCmd(0x0);  //dummy byte
 	//  oledWriteCmd(0xff); //dummy byte
 	//  oledWriteCmd(0x2f); //start scrolling
-	oledWriteCmd(0xb0); //set page start address to page 0
+	
+	oledWriteCmd(0x20); //set page addressing mode
+	oledWriteCmd(0x00);
+
+	oledWipeScreen();
+
 }
 void oledWriteString(char *characters)
 {
